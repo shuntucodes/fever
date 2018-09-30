@@ -26,7 +26,7 @@ from tqdm import tqdm
 import utils
 from doc_db import DocDB
 
-DB_PATH = 'data/single/fever.db'
+DB_PATH = 'data/single/fever0.db'
 MAT_PATH = 'data/index/tfidf-count-ngram=1-hash=16777216.npz'
 
 class Oracle(object):

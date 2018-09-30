@@ -50,7 +50,7 @@ def save_sparse_csr(filename, matrix, metadata=None):
 
 
 def load_sparse_csr(filename):
-    loader = np.load(filename)
+    loader = np.load(filename, encoding='latin1')
     matrix = sp.csr_matrix((loader['data'], loader['indices'],
                             loader['indptr']), shape=loader['shape'])
     return matrix, loader['metadata'].item(0) if 'metadata' in loader else None

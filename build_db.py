@@ -9,7 +9,6 @@ import argparse
 import sqlite3
 import json
 import os
-import importlib.util
 
 from multiprocessing import Pool as ProcessPool
 from tqdm import tqdm
