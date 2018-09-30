@@ -98,7 +98,6 @@ _ = fever.experiment(
     train_reader=fever.SampledTrainReader(samp_percentage=percentage), 
     phi=word_cross_product_phi,
     oracle=oracle,
-    model_file_name="maxent_word_cross_product_model.joblib",
     train_func=fit_maxent_classifier,
     assess_reader=fever.SampledDevReader(),
     random_state=42)
