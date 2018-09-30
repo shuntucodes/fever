@@ -10,8 +10,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.externals import joblib
 import fever
 import utils
-
-DB_PATH = 'data/single/fever0.db'
+import os.path
+if os.path.isfile('data/single/fever0.db'):
+    DB_PATH = 'data/single/fever0.db'
+else:
+    DB_PATH = 'data/single/fever.db'
 MAT_PATH = 'data/index/tfidf-count-ngram=1-hash=16777216.npz'
 
 oracle = fever.Oracle()
